@@ -1,0 +1,49 @@
+.formProd {
+    min-width: 50rem;
+}
+
+.divLabel {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.formFields {
+    display: flex;
+    flex-direction: row;
+    width: 100%
+}
+
+.field {
+    margin: 10px;
+}
+
+label {
+    vertical-align: top;
+    margin-bottom: 10cm;
+}
+
+input {
+    width: 300px;
+}
+
+p-dropdown {
+    width: 100%;
+}
+
+p-inputNumber {
+    width: 300px;
+}
+
+p-checkbox {
+    width: 300px;
+    position: relative;
+    top: 50%;
+}
+
+p-calendar {
+    width: 300px;
+}
+
+p-button {
+    margin-right: 5px;
+}

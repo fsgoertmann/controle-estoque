@@ -1,0 +1,40 @@
+<div class="card flex justify-content-center">
+    <div class="formFields">
+        <div class="field">
+            <div class="divLabel"><label htmlFor="nomeProd">Nome</label></div>
+            <input id="nomeProd" class="nome" type="text" pInputText [(ngModel)]="nome" maxlength="50" />
+        </div>
+        <div class="field">
+            <div class="divLabel"><label htmlFor="qtdProd">Quantidade</label></div>
+            <input id="qtdProd" class="qtd" type="number" pInputText [(ngModel)]="quantidade"/>
+        </div>
+        <div class="field">
+            <div class="divLabel"><label htmlFor="unid">Unidade</label></div>
+            <p-dropdown [options]="unidades" dataKey="code" [(ngModel)]="unidadeSelecionada" optionLabel="name"
+                placeholder="Selecione uma unidade" [editable]="true" [style]="{'width':'15rem'}"></p-dropdown>
+        </div>
+    </div>
+    <div class="formFields">
+        <div class="field">
+            <div class="divLabel"><label htmlFor="preco">Preço</label></div>
+            <p-inputNumber inputId="currency-brl" mode="currency" currency="BRL" locale="pt-BR" id="preco" class="qtd"
+                type="number" [(ngModel)]="preco"/>
+        </div>
+        <div class="field">
+            <div class="divLabel"><label htmlFor="fabricacao">Data de Fabricação</label></div>
+            <p-calendar id="fabricacao" [(ngModel)]="fabricacao" dateFormat="dd.mm.yy"></p-calendar>
+        </div>
+        <div class="field">
+            <div class="divLabel"><label htmlFor="validade">Data de Validade</label></div>
+            <p-calendar id="validade" [(ngModel)]="validade" dateFormat="dd.mm.yy"></p-calendar>
+        </div>
+        <div class="field">
+            <p-checkbox [(ngModel)]="perecivel" label="Perecível" [binary]="true" inputId="binary"
+                (onChange)="validadeDisabled()"></p-checkbox>
+        </div>
+    </div>
+    <div>
+        <p-button label="Primary" label="Salvar" (click)="salvarProduto()"></p-button>
+        <p-button label="Secondary" styleClass="p-button-secondary" label="Cancelar" (click)="cancelar()"></p-button>
+    </div>
+</div>
